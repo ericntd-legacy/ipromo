@@ -1,12 +1,15 @@
 SampleApp::Application.routes.draw do
+  get "promos/new"
+
   # 'resources :users' covers all the actions needed for a RESTful Users resource
 				# e.g. show, new etc.
-				resources :users
+				resources :users, :promos
 	#get "users/new"
 	
 	# 'to' format is: <controller>#<action>
   root to: "static_pages#home"
 	
+	match 'addpromo', to: 'promos#new'
 	match 'signup', to: 'users#new'
   match 'help', to: "static_pages#help"
 

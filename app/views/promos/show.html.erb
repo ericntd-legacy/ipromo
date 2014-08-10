@@ -1,0 +1,5 @@
+<% provide(:title, @promo.name) %>
+<h1><%= @promo.name %></h1>
+<p><%= @promo.desc%></p>
+<br />
+<%= image_tag(@promo.imgsrc, alt: "a promo")%>
