@@ -1,5 +1,8 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
+  # 'resources :users' covers all the actions needed for a RESTful Users resource
+				# e.g. show, new etc.
+				resources :users
+	#get "users/new"
 	
 	# 'to' format is: <controller>#<action>
   root to: "static_pages#home"
