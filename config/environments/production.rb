@@ -4,6 +4,11 @@ SampleApp::Application.configure do
   # Code is not reloaded between requests
   config.cache_classes = true
 
+  # Do not eager load code on boot. This avoids loading your whole application
+  # just for the purpose of running a single test. If you are using a tool that
+  # preloads Rails for running tests, you may have to set it to true.
+  config.eager_load = true
+
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true

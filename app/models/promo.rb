@@ -11,7 +11,7 @@
 #
 
 class Promo < ActiveRecord::Base
-  attr_accessible :desc, :imgsrc, :name
+  # attr_accessible :desc, :imgsrc, :name
 
 	validates :desc, presence: true
 	validates :imgsrc, presence: true

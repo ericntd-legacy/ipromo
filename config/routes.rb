@@ -5,17 +5,17 @@ SampleApp::Application.routes.draw do
 				# e.g. show, new etc.
 				resources :users, :promos
 	#get "users/new"
-	
+
 	# 'to' format is: <controller>#<action>
   root to: "static_pages#home"
-	
-	match 'addpromo', to: 'promos#new'
-	match 'signup', to: 'users#new'
-  match 'help', to: "static_pages#help"
 
-	match 'about', to: "static_pages#about"
+	match 'addpromo', to: 'promos#new', via: [:get, :post]
+	match 'signup', to: 'users#new', via: [:get, :post]
+  match 'help', to: "static_pages#help", via: [:get, :post]
 
-	match 'contact', to: "static_pages#contact"
+	match 'about', to: "static_pages#about", via: [:get, :post]
+
+	match 'contact', to: "static_pages#contact", via: [:get, :post]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

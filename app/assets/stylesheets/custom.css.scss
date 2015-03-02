@@ -1,7 +1,10 @@
-@import "bootstrap";
+// @import "bootstrap";
 /* mixins, variables, etc. */
 
+$gray: #eaeaea;
+$grayLight: #eaeaea;
 $grayMediumLight: #eaeaea;
+$grayDarker: #eaeaea;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -138,6 +141,6 @@ input {
 }
 
 .field_with_errors {
-  @extend .control-group;
-  @extend .error;
+  @extend .control-group !optional;
+  @extend .error !optional;
 }
