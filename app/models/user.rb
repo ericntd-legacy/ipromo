@@ -10,8 +10,8 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :name
-	
+  # attr_accessible :email, :name
+
 	# callback implementation to convert email address to lower case
 	# before saving user to the db
 	# this enables the DB to check the uniqueness of email address case-insensitive
@@ -21,4 +21,5 @@ class User < ActiveRecord::Base
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	# here email uniqueness, including case sensitivity is checked by rails
 	validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}, uniqueness: { case_sensitive: false }
+  has_secure_password
 end

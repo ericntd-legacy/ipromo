@@ -14,10 +14,13 @@ gem 'bcrypt',               '3.1.7'
 group :development, :test do
   gem 'sqlite3', '1.3.9'
   # gem 'rspec-rails', '2.11.0'
+  gem 'byebug',      '3.4.0'
+  gem 'web-console', '2.0.0.beta3'
+  gem 'spring',      '1.1.3'
 end
 
 group :development do
-  gem 'annotate', '2.5.0'
+  # gem 'annotate', '2.5.0'
 end
 
 # Gems used only for assets and not required
@@ -30,8 +33,11 @@ group :assets do
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
-	gem 'factory_girl_rails', '4.1.0'
+  # gem 'capybara', '1.1.2'
+	# gem 'factory_girl_rails', '4.1.0'
+  gem 'minitest-reporters', '1.0.5'
+  gem 'mini_backtrace',     '0.1.3'
+  gem 'guard-minitest',     '2.3.1'
 end
 
 group :production do

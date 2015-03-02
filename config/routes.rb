@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :users
+
   get "promos/new"
 
   # 'resources :users' covers all the actions needed for a RESTful Users resource
